@@ -1,0 +1,46 @@
+Started by user [8mha:////4CLmN127+5Kji08TjzrnvNgdkhYX3AbEQG77ldG63qmcAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9vMzs0rwsAPEe1pvBAAAA[0mNikunj Patel
+Running as SYSTEM
+Building remotely on [8mha:////4KWvbasPSwh3zDxiHViXPn5QftoK1WuanPoQ/NRx2XPAAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZB/eT83ILSktQifRd/Z2/XIEMAeMyF+MYAAAA=[0mDOCKER1 in workspace C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/jekins\workspace\DOCKER-TEST
+[DOCKER-TEST] $ sh -xe C:\Users\NIKUNJ~1.COM\AppData\Local\Temp\jenkins3198824010429772061.sh
+The system cannot find the file specified
+FATAL: command execution failed
+java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(Unknown Source)
+	at java.lang.ProcessImpl.start(Unknown Source)
+Also:   hudson.remoting.Channel$CallSiteStackTrace: Remote call to JNLP4-connect connection from 172.17.0.1/172.17.0.1:55308
+		at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1800)
+		at hudson.remoting.UserRequest$ExceptionResponse.retrieve(UserRequest.java:356)
+		at hudson.remoting.Channel.call(Channel.java:1001)
+		at hudson.Launcher$RemoteLauncher.launch(Launcher.java:1121)
+		at hudson.Launcher$ProcStarter.start(Launcher.java:508)
+		at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:143)
+		at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:91)
+		at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+		at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:803)
+		at hudson.model.Build$BuildExecution.build(Build.java:197)
+		at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+		at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:513)
+		at hudson.model.Run.execute(Run.java:1907)
+		at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+		at hudson.model.ResourceController.execute(ResourceController.java:97)
+		at hudson.model.Executor.run(Executor.java:429)
+Caused: java.io.IOException: Cannot run program "sh" (in directory "C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT\jekins\workspace\DOCKER-TEST"): CreateProcess error=2, The system cannot find the file specified
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at hudson.Proc$LocalProc.<init>(Proc.java:252)
+	at hudson.Proc$LocalProc.<init>(Proc.java:221)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:996)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:508)
+	at hudson.Launcher$RemoteLaunchCallable.call(Launcher.java:1390)
+	at hudson.Launcher$RemoteLaunchCallable.call(Launcher.java:1333)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:376)
+	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:78)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:119)
+	at java.lang.Thread.run(Unknown Source)
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

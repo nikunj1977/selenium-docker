@@ -1,0 +1,64 @@
+To configured Selenium Grid and run test on it
+
+--> Pull following three images
+    * selenium/node-firefox:3.14
+    * selenium/node-chrome:3.14
+    * selenium/hub:3.14
+--> Create docker-compose.yaml file
+--> Run container using compose file on docker CLI
+--> Make selenium grid up once container is running -->http://localhost:8080/grid/console
+--> Once grid is up execute test on intelliJ
+
+To run tests on local
+
+--> Add three Maven plugins in pom.xml file (compiler, jar and dependency)
+--> Create Maven package and create jar files ... mvn clean package DskipTests
+--> Execute tests using jars and libs resources ... java -cp selenium-docker.jar;selenium-docker-tests.jar;libs/* org.testng.TestNG ../testng.xml
+    --> Command to run test on firefox --> java -cp selenium-docker.jar;selenium-docker-tests.jar;libs/* -DBROWSER=firefox org.testng.TestNG ../testng.xml
+
+Create our own image
+
+--> Create Dockerfile to create image (Present in project tree)
+--> Build image -> docker build -t=nbtest001/selenium-docker . (selenium-docker is an image name)
+--> Create container from that image -> docker run -it --entrypoint=/bin/sh nbtest001/selenium-docker (This command will take you in container)
+--> Run tests in container -> java -cp selenium-docker.jar:selenium-docker-tests:libs/* org.testng.TestNG testng.xml
+--> Volume mapping to get test-output file from container to local machine
+    -> docker run -it --entrypoint=/bin/sh -v C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/output:/Usersnikunj.bambhroliya@spika.comSELENIUM_DOCKER_PROJECT/test-output nbtest001/selenium-docker
+    Run this command on your local command prompt
+
+    At this point tests in container are failing this is because container is not able to find selenium grid within container so we need to
+    point out container to our local ip(192.168.0.17) where it can connect with selenium hub
+
+    Revised command to run test in container is
+
+    -> First get into container -> docker run -it --entrypoint=/bin/sh nbtest001/selenium-docker
+    -> Execute test in container -> java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* -DHUB_HOST=192.168.0.17 org.testng.TestNG testng.xml
+
+Execute tests by creating container
+
+-> docker run -e HUB_HOST=192.168.0.17 -e MODULE=testng.xml nbtest001/selenium-docker
+    -e is prefix to specify pass environment value
+
+    -> Running test with volume mapping to get execution report from container to local
+       -> docker run -d -e HUB_HOST=192.168.0.17 -e MODULE=testng.xml -v C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/output:/Usersnikunj.bambhroliya@spika.comSELENIUM_DOCKER_PROJECT/test-output nbtest001/selenium-docker
+
+   -> To run test for the particular module (This is for linux only)
+        -> docker-compose up | grep -e 'search-module1'
+
+   -> Command to remove stop containers
+        -> docker system prune -f
+
+
+--> --> Jenkins execution command
+    docker run -p 8080:8080 -p 50000:50000 -v "C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/Jenkins_Resources/jenkins:/var/jenkins_home" jenkins/jenkins:lts
+
+    --> Jenkins password - ba1d88a3599943ad93ee685fef9f07a3
+    --> jenkin Login
+        UN: Nikunj
+        PW: nikunj
+        Email: nbtest011@gmail.com
+
+--> GitHub Credentials
+        Username - nikunj1977
+        Password - nick778008122023
+        Email - n.kumarb@yahoo.com

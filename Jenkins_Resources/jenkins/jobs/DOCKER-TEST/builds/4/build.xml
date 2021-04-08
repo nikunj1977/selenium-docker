@@ -1,0 +1,27 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>Nikunj</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>5</queueId>
+  <timestamp>1617812708232</timestamp>
+  <startTime>1617812708274</startTime>
+  <result>SUCCESS</result>
+  <duration>716</duration>
+  <charset>windows-1252</charset>
+  <keepLog>false</keepLog>
+  <builtOn>DOCKER1</builtOn>
+  <workspace>C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/jekins\workspace\DOCKER-TEST</workspace>
+  <hudsonVersion>2.277.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

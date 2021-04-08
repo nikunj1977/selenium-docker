@@ -1,0 +1,8 @@
+Started by user [8mha:////4CLmN127+5Kji08TjzrnvNgdkhYX3AbEQG77ldG63qmcAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9vMzs0rwsAPEe1pvBAAAA[0mNikunj Patel
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/DOCKER-TEST
+[DOCKER-TEST] $ /bin/sh -xe /tmp/jenkins2348227479239744504.sh
++ docker ps
+/tmp/jenkins2348227479239744504.sh: 2: /tmp/jenkins2348227479239744504.sh: docker: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

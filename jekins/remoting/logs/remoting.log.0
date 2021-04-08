@@ -1,0 +1,27 @@
+Apr 07, 2021 4:57:38 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: DOCKER1
+Apr 07, 2021 4:57:38 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Apr 07, 2021 4:57:38 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.6
+Apr 07, 2021 4:57:38 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT\jekins\remoting as a remoting work directory
+Apr 07, 2021 4:57:40 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://localhost:8080/]
+Apr 07, 2021 4:57:41 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+Apr 07, 2021 4:57:41 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Agent discovery successful
+  Agent address: localhost
+  Agent port:    50000
+  Identity:      c9:3e:57:43:4c:26:38:c9:64:a3:ff:f4:1a:be:19:ee
+Apr 07, 2021 4:57:41 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Handshaking
+Apr 07, 2021 4:57:41 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to localhost:50000
+Apr 07, 2021 4:57:41 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Trying protocol: JNLP4-connect
+Apr 07, 2021 4:57:42 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Remote identity confirmed: c9:3e:57:43:4c:26:38:c9:64:a3:ff:f4:1a:be:19:ee
+Apr 07, 2021 4:57:45 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected
