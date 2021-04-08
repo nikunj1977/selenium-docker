@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'STEP_2--> BUILDING IMAGE...'
                 //sh
-                bat "docker build -t nbtest011/seleniumdocker ."
+                bat "docker build -t nbtest011/seleniumdocker_latest ."
             }
         }
         stage('Push Image') {

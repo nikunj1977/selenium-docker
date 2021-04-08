@@ -50,9 +50,9 @@ Execute tests by creating container
 
 
 --> --> Jenkins execution command
-    docker run -p 8080:8080 -p 50000:50000 -v "C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/Jenkins_Resources/jenkins:/var/jenkins_home" jenkins/jenkins:lts
+    docker run -p 8080:8080 -p 50000:50000 -v "C:\Users\nikunj.bambhroliya@spika.com\jenkins:/var/jenkins_home" jenkins/jenkins:lts
 
-    --> Jenkins password - ba1d88a3599943ad93ee685fef9f07a3
+    --> Jenkins password - 3dc0f2f0d0004fe3b38e63bd0fbd481c
     --> jenkin Login
         UN: Nikunj
         PW: nikunj

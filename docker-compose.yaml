@@ -30,7 +30,7 @@ services:
     volumes:
       - ./search_result_Chrome:/Users/nikunj.bambhroliya@spika.com/SELENIUM_DOCKER_PROJECT/test-output
   search-module-Firefox:
-    image: nbtest011/seleniumdocker
+    image: nbtest011/seleniumdocker_latest
     depends_on:
       - chrome
       - firefox
