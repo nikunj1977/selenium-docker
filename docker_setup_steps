@@ -58,6 +58,10 @@ Execute tests by creating container
         PW: nikunj
         Email: nbtest011@gmail.com
 
+    --> DOCKER HUB credentials to jenkins
+        Username - nbtest011
+        Password - nick@7528
+            ID - dockerhub
 --> GitHub Credentials
         Username - nikunj1977
         Password - nick778008122023
