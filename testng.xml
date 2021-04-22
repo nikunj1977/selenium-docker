@@ -1,5 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="book-flight-module" parallel = "tests">
+    <listeners>
+        <listener class-name="com.newtours.pages.ExtentReport.ExtentReporterNG" />
+
+    </listeners>
     <test name = "book-flight-1">
         <parameter name = "noOfPassengers" value="2" />
         <parameter name = "expectedPrice" value="$1169 USD" />
