@@ -23,7 +23,7 @@ Create our own image
 --> Create container from that image -> docker run -it --entrypoint=/bin/sh nbtest001/selenium-docker (This command will take you in container)
 --> Run tests in container -> java -cp selenium-docker.jar:selenium-docker-tests:libs/* org.testng.TestNG testng.xml
 --> Volume mapping to get test-output file from container to local machine
-    -> docker run -it --entrypoint=/bin/sh -v C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/output:/Usersnikunj.bambhroliya@spika.com/SELENIUM_DOCKER_PROJECT/test-output nbtest001/selenium-docker
+    -> docker run -it --entrypoint=/bin/sh -v C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/output:/Usersnikunj.bambhroliya@spika.comSELENIUM_DOCKER_PROJECT/test-output nbtest001/selenium-docker
     Run this command on your local command prompt
 
     At this point tests in container are failing this is because container is not able to find selenium grid within container so we need to

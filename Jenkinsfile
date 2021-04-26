@@ -22,8 +22,8 @@ pipeline {
                     //sh
                     echo 'STEP_3-->PUSHING IMAGE TO DOCKERHUB...'
 			        bat "docker login --username=nbtest011 --password=nick@7528"
-			        bat "docker push nbtest011/seleniumdocker:latest"
-			    }                           
+			        bat "docker push nbtest011/seleniumdocker_latest"
+			    }
             }
         }
     }
