@@ -1,0 +1,89 @@
+--> WHat is Docker: Docker is a tool to create, deploy and run the application with all the dependencies including runtime environment
+
+--> docker ps -a ---> List all the containers
+
+--> docker system prune -a --> Remove all images and containers
+
+--> Image Name Format: --> docker run [repository-host:port] / [owner] / imageName [:tag] 
+
+--> -d -> To run the container in the background
+	-i -> To attached the standard input to the container
+	-t -> To attacted the standard output to the container
+	--name -> To assign given name to our container
+	--entrypoint=bin/bash -> Entry 	Entrypoint is the command to be executed oncea container is created.
+	
+--> Port mapping in background --> docker run -d -p 8050:80 nginx
+
+
+-- > docker stop container name -> to stop container
+--------VOLUME PAMMING--------
+
+Volume mapping is a concept through which through we can share the file between host and the container.
+
+docker run -it -v (/relative path)t:/a/b ubuntu
+
+--------NETWORK---------------
+
+docker run -d -name=nginx --network=udemy-network nginx
+
+-- Where -name=nginx is a container name 
+
+--> Create image 
+
+Command
+FROM image       						-- The image which need to be used as base image. Very first command in the Dockerfile.
+ADD hostfile container file				-- /my/Test.java /a/b/ Test.java -->Add files from the host into image	
+RUN 									-- apt-get install.java
+ENV JAVA_HOME=/some/path
+WORKDIR /a/b/c
+EXPOSE 8050
+ENTRYPOINT sleep 5
+
+--> Build image -->docker build -t=nbtest001/datefinder(image name) need to go to source folder where docker file is reside		
+
+---------Docker Compose----------
+
+--> To run compose file (network) --> docker-compose up (docker-compose = docker-compose.yaml)
+--> To scale container --> docker-compose up -d --scale chrome=4 --scale firefox=4 (To run all test cases parallely in each browser)
+
+--> Zelenuim URL: https://opensource.zalando.com/zalenium/
+
+
+--> Volume mapping for Test-output folder to run Jar files 
+C:\Users\nikunj.bambhroliya\IdeaProjects\seleniumdocker>docker run -it --entrypoint=/bin/sh -v C:/Users/nikunj.bambhroliya/IdeaProjects/seleniumdocker/output:/Usersnikunj.bambhroliyaIdeaProjectsseleniumdocker/test-output nbtest011/seleniumdocker
+
+--> test execution with volume mapping of test log
+docker run -e HUB_HOST=192.168.0.32 -e MODULE=testng.xml -v C:/Users/nikunj.bambhroliya/IdeaProjects/seleniumdocker/output:/Usersnikunj.bambhroliyaIdeaProjectsseleniumdocker/test-output nbtest011/seleniumdocker
+
+-e HUB_HOST=192.168.0.32 = HOST IP where on grid hub is running (192.168.0.32:4444)
+-e MODULE=testng.xml = Testexecution file
+-v C:/Users/nikunj.bambhroliya/IdeaProjects/seleniumdocker/output = target Host machine where output folder shall created 
+:/Usersnikunj.bambhroliyaIdeaProjectsseleniumdocker/test-output = Container path from where test result from test-output folder withh be copied to host machine under output  folder
+nbtest011/seleniumdocker = Image name
+
+
+-->
+
+http://www.testautomationguru.com/selenium-webdriver-file-downloads-uploads-using-docker-grids/
+
+
+--> Jenkins Password: 88ff6395eb2a4cddaa014fc0d19aa54f
+
+--> Jenkins execution command
+docker run -p 8080:8080 -p 50000:50000 -v "C:/Users/nikunj.bambhroliya/IdeaProjects/seleniumdocker/test1:/var/jenkins_home" jenkins/jenkins:lts
+docker run -p 8080:8080 -p 50000:50000 -v "C:\Users\nikunj.bambhroliya@spika.com\Jenkins" jenkins/jenkins:lts
+
+--> jenkin Login
+UN: Nikunj
+PW: nikunj
+Email: nbtest011@gmail.com
+
+--> GitHub Credential
+nbtest011@gmail.com
+Nick7528
+
+--> Docker Credential
+UN: nbtest011
+PW: nick@1234
+
+docker run -it --entrypoint=/bin/sh -v C:\Users\nikunj.bambhroliya@spika.com\SELENIUM_DOCKER_PROJECT/output:/Usersnikunj.bambhroliya@spika.comSELENIUM_DOCKER_PROJECT/test-output nbtest001/selenium-docker

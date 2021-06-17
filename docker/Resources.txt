@@ -1,9 +1,12 @@
 To configured Selenium Grid and run test on it
 
---> Pull following three images
+--> Pull following images
     * selenium/node-firefox:3.14
     * selenium/node-chrome:3.14
     * selenium/hub:3.14
+    * docker pull jenkins/jenkins:lts
+    * docker pull maven:3-alpine
+
 --> Create docker-compose.yaml file
 --> Run container using compose file on docker CLI
 --> Make selenium grid up once container is running -->http://localhost:8080/grid/console
@@ -31,5 +34,5 @@ Create our own image
 
     Revised command to run test in container is
 
-    -> First get into container -> docker run -it --entrypoint=/bin/sh nbtest001/selenium-docker
+    -> First get into container -> docker run -it --entrypoint=/bin/sh nbtest011/seleniumdocker_latest
     -> Execute test in container -> java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* -DHUB=192.168.0.17 org.testng.TestNG testng.xml
